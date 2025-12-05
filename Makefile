@@ -1,7 +1,7 @@
-DOCKER_REPO ?= tmckcode
+DOCKER_REPO ?= ghcr.io/tmck-code/pokesay-convert
 DOCKER_TAG ?= latest
 
-DOCKER_IMAGE=$(DOCKER_REPO)/pokesay:$(DOCKER_TAG)
+DOCKER_IMAGE=$(DOCKER_REPO):$(DOCKER_TAG)
 
 ifeq ($(shell which gecho > /dev/null 2>&1 && echo 1 || echo 0), 1)
 	echo := gecho
